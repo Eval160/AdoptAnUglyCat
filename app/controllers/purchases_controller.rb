@@ -16,7 +16,7 @@ class PurchasesController < ApplicationController
     if @purchase.save
       redirect_to cats_path
     else
-      #
+      redirect_to cat_path(@cat)
     end
   end
 
