@@ -1,7 +1,7 @@
 class PurchasesController < ApplicationController
 
   def show
-    @purchase = Purchase.find(params[id])
+    @purchase = Purchase.find(params[:id])
   end
 
   def create
