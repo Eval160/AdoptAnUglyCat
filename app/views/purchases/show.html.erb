@@ -1,1 +1,9 @@
-<%= @purchase.user.last_name %>
+<div class="card">
+  <div class="card-body">
+    Félicitation M./Mlle <%= @purchase.user.last_name %>, votre UglyCat <%= @purchase.cat.name %> a bien été reservé, il arrivera le <%= Date.today + 5 %>
+    <%= link_to "Revoir sa fiche", cat_path(@purchase.cat), class: "btn btn-outline-primary"%>
+    <%= link_to "Adopter un autre UglyCat", cats_path, class: "btn btn-primary"%>
+  </div>
+</div>
+
+
