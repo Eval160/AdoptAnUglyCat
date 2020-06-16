@@ -11,7 +11,7 @@ class PurchasesController < ApplicationController
     @purchase.user = current_user
 
     if @purchase.save
-      redirect_to cats_path
+      render :show
     else
       render 'cats/show'
     end
