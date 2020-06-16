@@ -9,4 +9,5 @@ class CatsController < ApplicationController
     @cat = Cat.find(params[id])
   end
 
+
 end
