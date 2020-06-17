@@ -7,18 +7,25 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <%= simple_form_for :search, url: cats_path, method: "GET", html: { class: 'form-inline my-2 my-lg-0' } do |f| %>
+        <%= f.input :name, label: false ,input_html: {value: ""} %>
+        <%= f.submit "Search", class: "btn btn-outline-primary ml-2" %>
+      <% end %>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Menu</a>
+        <a class="nav-link" href="#">Adoptez-les tous</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="mailto:contac@adoptanuglycat.com">Contact</a>
       </li>
       <li class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/14e9738e-0016-419d-bf69-2d20cd5f8e78/d61iwvj-03a69657-810b-47d6-b1cc-f98eb4229aef.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMTRlOTczOGUtMDAxNi00MTlkLWJmNjktMmQyMGNkNWY4ZTc4XC9kNjFpd3ZqLTAzYTY5NjU3LTgxMGItNDdkNi1iMWNjLWY5OGViNDIyOWFlZi5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.R4X9hRT5eEQ-pVwxrA3dPpWdTVltdLp0antAo0EZjCs" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Connexion</a>
-          <a class="dropdown-item" href="#">Pas encore de compte ? Créer votre profil</a>
+          <a class="dropdown-item" href="#">Mon profil</a>
+          <a class="dropdown-item" href="#">Mes favoris</a>
+          <a class="dropdown-item" href="#">Mes adoptions</a>
+          <!-- <a class="dropdown-item" href="#">Connexion</a>
+          <a class="dropdown-item" href="#">Pas encore de compte ? Créer votre profil</a> -->
         </div>
       </li>
     </ul>
