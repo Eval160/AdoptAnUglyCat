@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="d-flex flex-column card shadow p-3">
     <div class="d-flex">
-      <img src="https://source.unsplash.com/150x100/?cats" style="width: 80rem;">
+      <img src="https://source.unsplash.com/250x183/?cats">
       <div class="pl-3">
         <h5 class="card-title"><%= @cat.name %></h5>
         <p class="card-text"><%= @cat.description %></p>
@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="mt-3 p-3">
-    <h3>Adopt this cat before Jules eat him!!</h3>
+    <h3>Adopt this cat before Jules eats him!!</h3>
     <%= simple_form_for [ @cat, @purchase ] do |f| %>
       <%= f.input :message%>
       <%= f.submit "Submit", class: "btn btn-primary" %>
