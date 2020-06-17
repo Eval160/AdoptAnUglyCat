@@ -6,6 +6,7 @@ class CatsController < ApplicationController
   end
 
   def show
+    @cats = Cat.all
     @cat = Cat.find(params[:id])
     @purchase = Purchase.new
   end
