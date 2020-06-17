@@ -3,8 +3,7 @@
 // 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
 // 3. You can override them below!
 
-$my_blue: #5CE1E6;
-
+$blue: #5CE1E6;
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
@@ -13,7 +12,7 @@ $font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
-$primary:    $my_blue;
+$primary:    $blue;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;

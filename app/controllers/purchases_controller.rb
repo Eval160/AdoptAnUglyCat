@@ -1,11 +1,8 @@
 class PurchasesController < ApplicationController
+
   def show
     @purchase = Purchase.find(params[:id])
   end
-
-  # def new
-  #   @purchase = Purchase.new
-  # end
 
   def create
     @cat = Cat.find(params[:cat_id])
@@ -14,9 +11,9 @@ class PurchasesController < ApplicationController
     @purchase.user = current_user
 
     if @purchase.save
-      redirect_to cats_path
+      render :show
     else
-      redirect_to cat_path(@cat)
+      render 'cats/show'
     end
   end
 
