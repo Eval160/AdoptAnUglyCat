@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container mt-5 p-5" style="height: 83vh">
   <div class="card">
     <div class="card-body text-center">
       Félicitation M./Mlle <%= @purchase.user.last_name %>, votre UglyCat <%= @purchase.cat.name %> a bien été reservé, il arrivera le <%= Date.today + 5 %>
@@ -7,7 +7,6 @@
         <%= link_to "Revoir sa fiche", cat_path(@purchase.cat), class: "btn btn-outline-primary mr-2"%>
         <%= link_to "Adopter un autre UglyCat", cats_path, class: "btn btn-primary"%>
       </div>
-
     </div>
   </div>
 </div>
