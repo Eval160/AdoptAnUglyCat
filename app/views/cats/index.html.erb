@@ -1,19 +1,27 @@
-<div class="titleindex d-flex justify-content-center">
-  <h1>Adopt' An Ugly Cat !</h1>
-  <%= image_tag "chat-eps.svg", alt: "chat"%>
-</div>
+<!-- <div class="backgroundwall" style="background-image:url('<%= image_path "fond.png" %>')"> -->
+  <div class="titleindex d-flex justify-content-center">
+    <h1>Adoptez-moi...</h1>
+    <h2><br>Sinon Jules me mangera !</h2>
+      <div class="stage">
+        <div class="box bounce-6">
+        <%= image_tag "chat-eps.svg", alt: "chat"%>
+        </div>
+      </div>
+  </div>
 
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center mb-4">
     <% @cats.each do |cat| %>
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-md-4 col-lg-4 mb-4">
         <%= link_to cat_path(cat), :class => "" do %>
         <img class="card-img-top" src="https://source.unsplash.com/1600x900/?cats,happy" alt="">
           <div class="card-cats">
             <h2><%= cat.name %></h2>
-        <% end %>
+            <div class="card-trip-pricing">Frais de d'adoption: 130€</div>
+            <% end %>
           </div>
       </div>
     <% end %>
   </div>
+</div>
 </div>

@@ -1,16 +1,27 @@
 .titleindex h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: black;
 }
 
+.titleindex h2 {
+  font-size: 35px;
+  font-weight: medium;
+  text-align: center;
+  color: black;
+}
+
 .titleindex {
-  margin-top: 100px;
+  margin-top: 120px;
   margin-bottom: 25px;
 }
 
+// .backgroundwall {
+//   background-size: cover;
+// }
+
 .titleindex img {
-  width: 50px;
+  width: 60px;
   margin-left: 10px;
 }
 
@@ -20,8 +31,42 @@
 }
 
 .card-cats h2 {
-  font-size: 22px;
+  font-size: 25px;
   text-align: center;
   font-weight: bold;
-  padding: 14px;
+  padding: 10px;
 }
+
+.card-trip-pricing {
+  font-size: 14px;
+  text-align: right;
+  margin-right: 10px;
+  color: black;
+  opacity: 0.7;
+}
+
+.stage {
+  display: flex;
+}
+
+.box {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.bounce-6 {
+  animation-name: bounce-6;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-6 {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(-100px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  57%  { transform: scale(1,1)    translateY(-7px); }
+  64%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
+}
+
