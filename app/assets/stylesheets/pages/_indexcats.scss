@@ -1,13 +1,17 @@
-h1 {
+.titleindex h1 {
   font-size: 40px;
   font-weight: bold;
   color: black;
+}
+
+.titleindex {
   margin-top: 100px;
   margin-bottom: 25px;
 }
 
-img {
- width: 50px;
+.titleindex img {
+  width: 50px;
+  margin-left: 10px;
 }
 
 .card-cats {
