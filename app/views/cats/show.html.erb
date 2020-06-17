@@ -1,19 +1,33 @@
 <div class="container mt-5">
-  <div class="d-flex flex-column card shadow p-3">
+  <div class="d-flex flex-column card shadow p-3 mb-4">
     <div class="d-flex">
       <img src="https://source.unsplash.com/150x100/?cats" style="width: 80rem;">
       <div class="pl-3">
-        <h5 class="card-title"><%= @cat.name %></h5>
+        <h3 class="card-title"><%= @cat.name %></h3>
         <p class="card-text"><%= @cat.description %></p>
         <%= link_to "Return to cats list", cats_path, class: "btn btn-primary" %>
       </div>
     </div>
     <div class="mt-3 p-3">
-    <h3>Adopt this cat before Jules eat him!!</h3>
-    <%= simple_form_for [ @cat, @purchase ] do |f| %>
-      <%= f.input :message%>
-      <%= f.submit "Submit", class: "btn btn-primary" %>
-    <% end %>
+      <h3>Adopt this cat before Jules eat him!!</h3>
+      <%= simple_form_for [ @cat, @purchase ] do |f| %>
+        <%= f.input :message%>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+
+    <div class='text-center'>
+      <h4>Other lovely cats</h4>
+      <div class="d-flex justify-content-around mr-3 ml-3">
+        <% @cats.sample(5).each do |cat|%>
+          <%= link_to cat_path(cat), class: "card shadow p-1" do %>
+            <img src="https://source.unsplash.com/150x100/?cats">
+            <p class="mt-2"><%= cat.name %></p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
     </div>
   </div>
 </div>
