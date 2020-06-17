@@ -1,26 +1,4 @@
 // Import page-specific CSS files here.
-h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: black;
-  margin-top: 100px;
-  margin-bottom: 25px;
-}
-
-img {
- width: 50px;
-}
-
-.card-cats {
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.card-cats h2 {
-  font-size: 22px;
-  text-align: center;
-  font-weight: bold;
-  padding: 14px;
-}
-
 @import "home";
+@import "listepages";
+
