@@ -1,7 +1,8 @@
 class PurchasesController < ApplicationController
 
   def index
-    @purchases = Purchase.all
+    @purchases = Purchase.where(user: current_user)
+    @suivi_images = ['suivi1.svg', 'suivi2.svg', 'suivi3.svg']
   end
 
   def show
