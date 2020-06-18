@@ -12,20 +12,23 @@
 <div class="container">
   <div class="row justify-content-center mb-4">
     <% @cats.each do |cat| %>
-      <div class="col-12 col-md-4 col-lg-4 mb-4">
-        <%= link_to cat_path(cat), :class => "" do %>
-        <% if cat.photo.attached? %>
-        <%= cl_image_tag cat.photo.key, height: 200, width: 300, crop: :fill %>
-      <% else %>
-        <img class="card-img-top" src="https://source.unsplash.com/250x183/?cats"/>
-       <% end %>
-          <div class="card-cats">
-            <h2><%= cat.name %></h2>
-            <div class="card-trip-pricing">Frais d'adoption: 130€</div>
-            <% end %>
-          </div>
+      <div class="card-img col-12 col-md-4 col-lg-4 mb-4">
+          <% if cat.photo.attached? %>
+            <div class="card-background-img" style="background-image: url(<%= cl_image_path cat.photo.key %>); height: 200, width: 300, crop: :fill %>')">
+              <i class="far fa-heart"></i>
+            </div>
+          <% else %>
+            <div class="card-background-img" style="background-image: url('https://source.unsplash.com/250x183/?cats')">
+              <button type="button" class="btn mybutton btn-light rounded-circle" data-toggle="button" aria-pressed="false" autocomplete="off">
+              <i class="far fa-heart"></i>
+              </button>
+            </div>
+          <% end %>
+            <div class="card-cats">
+              <h2><%= link_to cat.name, cat_path(cat) %></h2>
+              <div class="card-trip-pricing">130€</div>
+            </div>
       </div>
     <% end %>
   </div>
-</div>
 </div>
