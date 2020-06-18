@@ -1,16 +1,19 @@
 <div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="d-flex">
     <%= link_to root_path , class: "navbar-brand" do %>
-    <%= image_tag "logo.adopt.svg", alt: "logo" %>
-  <% end %>
+      <%= image_tag "logo.adopt.svg", alt: "logo" %>
+    <% end %>
+    <%= simple_form_for :search, url: cats_path, method: "GET", html: { class: 'form-inline my-2 my-lg-0 ml-3' } do |f| %>
+      <%= f.input :name, label: false ,input_html: {value: ""} %>
+      <%= f.submit "Search", class: "btn btn-outline-primary ml-2" %>
+    <% end %>
+  </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse " id="navbarSupportedContent">
-    <%= simple_form_for :search, url: cats_path, method: "GET", html: { class: 'form-inline my-2 my-lg-0 mr-5' } do |f| %>
-        <%= f.input :name, label: false ,input_html: {value: ""} %>
-        <%= f.submit "Search", class: "btn btn-outline-primary ml-2" %>
-      <% end %>
+
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <%= link_to "Adoptez-les tous", cats_path, class: "nav-link" %>
