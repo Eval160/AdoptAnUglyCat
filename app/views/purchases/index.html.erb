@@ -1,0 +1,9 @@
+<div class="container pt-5 mt-5">
+  <% @purchases.each do |purchase|%>
+    <% if purchase.user == current_user %>
+      <p><%= purchase.cat.name %> - <%= purchase.user.last_name %></p>
+    <% end %>
+  <% end %>
+
+</div>
+
