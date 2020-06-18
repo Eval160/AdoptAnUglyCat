@@ -1,5 +1,4 @@
-
-<div class="container mt-5 p-5" style="height: 83vh">
+<div class="container my-5 p-5" >
   <div class="row">
     <div class="col-12 col-sm-6 offset-sm-3 col-md-8 offset-md-2">
 
@@ -13,17 +12,14 @@
           </div>
         </div>
       </div>
-
       <div class="text-center confirmation-purchase-cat">
-
-          <% if @purchase.cat.photo.attached? %>
-            <%= cl_image_tag @cat.photo.key, height: 300, width: 300, crop: :fill %>
-          <% else %>
-            <img src="https://source.unsplash.com/200x200/?cats"/>
-          <% end %>
-          <h5><%= @purchase.cat.name %></h5>
+        <% if @purchase.cat.photo.attached? %>
+          <%= cl_image_tag @cat.photo.key, height: 300, width: 300, crop: :fill %>
+        <% else %>
+          <img src="https://source.unsplash.com/200x200/?cats"/>
+        <% end %>
+        <h5><%= @purchase.cat.name %></h5>
       </div>
-
     </div>
   </div>
 </div>
