@@ -14,7 +14,11 @@
     <% @cats.each do |cat| %>
       <div class="col-12 col-md-4 col-lg-4 mb-4">
         <%= link_to cat_path(cat), :class => "" do %>
-        <img class="card-img-top" src="https://source.unsplash.com/1600x900/?cats,happy" alt="">
+        <% if cat.photo.attached? %>
+        <%= cl_image_tag cat.photo.key, height: 200, width: 300, crop: :fill %>
+      <% else %>
+        <img class="card-img-top" src="https://source.unsplash.com/250x183/?cats"/>
+       <% end %>
           <div class="card-cats">
             <h2><%= cat.name %></h2>
             <div class="card-trip-pricing">Frais d'adoption: 130€</div>

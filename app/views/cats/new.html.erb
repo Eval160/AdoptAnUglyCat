@@ -4,6 +4,7 @@
   <%= simple_form_for @cat do |f| %>
     <%= f.input :name %>
     <%= f.input :description, input_html: { maxlength: 150 } %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit 'Publier mon annonce', class: "btn btn-primary"%>
   <% end %>
 </div>

@@ -1,7 +1,11 @@
 <div class="container mt-5 p-5">
   <div class="d-flex flex-column card-show-cat shadow p-3 mr-auto ml-auto">
     <div class="d-flex">
-      <img src="https://source.unsplash.com/250x183/?cats">
+      <% if @cat.photo.attached? %>
+        <%= cl_image_tag @cat.photo.key, height: 200, width: 300, crop: :fill %>
+      <% else %>
+        <img src="https://source.unsplash.com/250x183/?cats"/>
+       <% end %>
       <div class="pl-3 text-justify">
         <h3 class="card-title"><%= @cat.name %></h3>
         <p class="card-text"><%= @cat.description %></p>
@@ -20,7 +24,11 @@
       <div class="d-flex justify-content-around mr-3 ml-3">
         <% @cats.sample(3).each do |cat|%>
           <%= link_to cat_path(cat), class: "card shadow p-1" do %>
-            <img src="https://source.unsplash.com/150x100/?cats">
+          <% if cat.photo.attached? %>
+          <%= cl_image_tag cat.photo.key, height: 200, width: 300, crop: :fill %>
+          <% else %>
+          <img src="https://source.unsplash.com/250x183/?cats"/>
+        <% end %>
             <p class="mt-2"><%= cat.name %></p>
           <% end %>
         <% end %>
