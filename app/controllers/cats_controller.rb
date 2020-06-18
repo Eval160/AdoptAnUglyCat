@@ -2,8 +2,10 @@ class CatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    if params[:search][:name].present?
-      @cats = Cat.search_by_name_and_description(params[:search][:name])
+    if params[:search].present?
+      if params[:search][:name].present?
+        @cats = Cat.search_by_name_and_description(params[:search][:name])
+      end
     else
       @cats = Cat.all
     end
