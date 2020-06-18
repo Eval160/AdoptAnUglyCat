@@ -1,12 +1,29 @@
 
 <div class="container mt-5 p-5" style="height: 83vh">
-  <div class="card">
-    <div class="card-body text-center">
-      Félicitation M./Mlle <%= @purchase.user.last_name %>, votre UglyCat <%= @purchase.cat.name %> a bien été reservé, il arrivera le <%= Date.today + 5 %>
-      <div class="d-flex justify-content-center mt-2">
-        <%= link_to "Revoir sa fiche", cat_path(@purchase.cat), class: "btn btn-outline-primary mr-2"%>
-        <%= link_to "Adopter un autre UglyCat", cats_path, class: "btn btn-primary"%>
+  <div class="row">
+    <div class="col-12 col-sm-6 offset-sm-3 col-md-8 offset-md-2">
+
+      <div class="card mb-4">
+        <div class="card-body text-center">
+          <h4>Félicitations!</h4>
+          <p><%= @purchase.user.first_name.capitalize %>, ton UglyCat <%= @purchase.cat.name %> a bien été reservé,</p>
+          <p>il arrivera le <%= Date.today + 5 %></p>
+          <div class="d-flex justify-content-center mt-2">
+            <%= link_to "Adopter un autre UglyCat", cats_path, class: "btn btn-primary"%>
+          </div>
+        </div>
       </div>
+
+      <div class="text-center confirmation-purchase-cat">
+
+          <% if @purchase.cat.photo.attached? %>
+            <%= cl_image_tag @cat.photo.key, height: 300, width: 300, crop: :fill %>
+          <% else %>
+            <img src="https://source.unsplash.com/200x200/?cats"/>
+          <% end %>
+          <h5><%= @purchase.cat.name %></h5>
+      </div>
+
     </div>
   </div>
 </div>
