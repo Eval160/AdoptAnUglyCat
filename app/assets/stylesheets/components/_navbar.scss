@@ -25,3 +25,20 @@
 .home-logo {
   position: absolute;
 }
+
+.logo-style {
+  width: 165px;
+  height: 165px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  margin-left: -82px !important;
+}
+.logo-style img {
+  width: 80%;
+}
