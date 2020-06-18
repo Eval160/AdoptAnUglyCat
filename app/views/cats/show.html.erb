@@ -1,13 +1,18 @@
 <div class="container mt-5 p-5">
   <div class="d-flex flex-column card-show-cat shadow p-3 mr-auto ml-auto">
     <div class="d-flex">
-      <img src="https://source.unsplash.com/250x183/?cats">
+      <% if @cat.photo.attached? %>
+          <%= cl_image_tag @cat.photo.key, height: 200, width: 300, crop: :fill %>
+        <% else %>
+          <img src="https://source.unsplash.com/250x183/?cats"/>
+        <% end %>
       <div class="pl-3 text-justify">
         <h3 class="card-title"><%= @cat.name %></h3>
         <p class="card-text"><%= @cat.description %></p>
         <%= link_to "Revoir tous les chats", cats_path, class: "btn btn-primary" %>
       </div>
     </div>
+
     <div class="mt-3 p-3">
       <%= simple_form_for [ @cat, @purchase ] do |f| %>
         <%= f.input :message%>

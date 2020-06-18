@@ -1,0 +1,11 @@
+<div class="container my-5 pt-5">
+  <div class="card p-5">
+    <%= simple_form_for @cat do |f|%>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file%>
+
+      <%= f.submit 'Poster mon annonce', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
