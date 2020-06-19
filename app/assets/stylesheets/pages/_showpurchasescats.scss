@@ -1,0 +1,67 @@
+.card-show-cat {
+  width: 700px;
+  height: 700px;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.rand-cats{
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.rand-cats h4 {
+  margin-bottom: 15px;
+}
+.rand-cats .card {
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.confirmation-purchase-cat img {
+  border-radius: 50%;
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+#canvas-container-div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+}
+
+#restart-button-div {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  background: white;
+  opacity: 0.7;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+#restart-icon {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate( -50%, -50% );
+  width: 35px;
+  height: 45px;
+}
