@@ -1,4 +1,4 @@
-<div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon" id="homenavbar">
+<div class="navbar fixed-top .navbar-expand{-sm|-md|-lg|-xl} navbar-light navbar-lewagon" id="homenavbar">
     <%= simple_form_for :search, url: cats_path, method: "GET", html: { class: 'form-inline my-2 my-lg-0 mr-5' } do |f| %>
         <%= f.input :name, label: false ,input_html: {value: ""} %>
         <%= f.submit "Search", class: "btn btn-outline-primary ml-2" %>
