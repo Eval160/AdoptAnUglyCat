@@ -25,3 +25,10 @@
 .footer .fa-heart {
   color: #D23333;
 }
+
+@media (max-width: 576px) {
+
+  .footer-copyright {
+    font-size: 15px;
+   }
+}
