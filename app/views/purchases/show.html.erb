@@ -26,7 +26,7 @@
       </div>
       <div class="text-center confirmation-purchase-cat">
         <% if @purchase.cat.photo.attached? %>
-          <%= cl_image_tag @cat.photo.key, height: 300, width: 300, crop: :fill %>
+          <%= cl_image_tag @cat.photo.key, height: 300, width: 300, crop: :thumb, gravity: :face%>
         <% else %>
           <img src="https://source.unsplash.com/200x200/?cats"/>
         <% end %>
