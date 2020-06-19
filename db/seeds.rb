@@ -6,14 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+puts "delete all purchases"
+Purchase.delete_all
 puts "delete all cats"
 Cat.delete_all
 
-puts "Create 30 cats"
+puts "Create 15 cats"
 
-30.times do
+15.times do
   name = Faker::FunnyName.name
-  Cat.create!(name: name)
+  description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua."
+  Cat.create!(name: name, description: description)
 end
 
 puts "Finish"
