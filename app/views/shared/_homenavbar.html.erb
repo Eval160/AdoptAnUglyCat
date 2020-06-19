@@ -1,4 +1,5 @@
 <div class="navbar fixed-top navbar-expand-sm navbar-light navbar-lewagon" id="homenavbar">
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
     <%= simple_form_for :search, url: cats_path, method: "GET", html: { class: 'form-inline my-2 my-lg-0 mr-5' } do |f| %>
         <%= f.input :name, label: false ,input_html: {value: ""} %>
         <%= f.submit "Search", class: "btn btn-outline-primary ml-2" %>
@@ -6,6 +7,7 @@
     <div class="logo-style shadow" >
         <%= image_tag "logo.adopt.svg", alt: "logo" %>
     </div>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
